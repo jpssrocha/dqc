@@ -14,14 +14,11 @@ execution. See the implementation plan for the full architecture.
 
 ## Repository layout
 
-| `plans/` | Implementation plan (Typst, `implementation_plan.typ`) describing the two workflows (runtime management and online job execution), module specs, design patterns, and the test plan. |
-| `dqc/` | Intended home of the core runtime package. Currently only empty stubs (`pipeline.py`, `watcher.py`); the working code lives in the spikes under `dqc_test/`. |
-| `dqc_modules/` | Separate `uv` workspace package for user-submitted processing modules. `main.py` is the Stage One module: reads the apparatus CSV, fits a line by gradient descent with JAX, and writes output back out. |
-| `dqc_test/` | Exploratory spikes implementing the plan's modules and test scenario (see below). |
-| `dqc_test/linefit/` | Abandoned Rust scaffold for Stage One, kept only as a record of the exploration. |
-| `dqc_test/test_data/` | Generated apparatus CSV fixtures (`x`, `y`) used to exercise the pipeline. |
-| `__marimo__/` | marimo notebook session cache (generated). |
-| `.venv/` | `uv` virtual environment (generated). |
+- `dqc/` | Intended home of the core runtime package. Currently only empty stubs (`pipeline.py`, `watcher.py`); the working code lives in the spikes under `dqc_test/`. |
+- `dqc_modules/` | Separate `uv` workspace package for user-submitted processing modules. `main.py` is the Stage One module: reads the apparatus CSV, fits a line by gradient descent with JAX, and writes output back out. |
+- `dqc_test/` | Exploratory spikes implementing the plan's modules and test scenario (see below). |
+- `dqc_test/linefit/` | Abandoned Rust scaffold for Stage One, kept only as a record of the exploration. |
+- `dqc_test/test_data/` | Place for generated apparatus CSV fixtures (`x`, `y`) used to exercise the pipeline. |
 
 ## Root files
 
